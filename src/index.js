@@ -7,6 +7,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 require('./controller/authController')(app);
+require('./controller/walletController')(app);
 
 app.get('/', (req, res) => {
     res.send('OK')
