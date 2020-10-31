@@ -10,7 +10,9 @@ require('./controller/authController')(app);
 require('./controller/walletController')(app);
 
 app.get('/', (req, res) => {
-    res.send('OK')
+    res.json({
+        status: 'ok'
+    })
 });
 
 app.listen(2000);
